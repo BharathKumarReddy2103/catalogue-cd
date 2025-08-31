@@ -10,6 +10,7 @@ This repository contains:
 - **Jenkinsfile**: Pipeline as code for automated CI/CD with Jenkins.
 - **Kubernetes YAML files**: Declarative specs for deploying and managing the Catalogue microservice in Kubernetes clusters.
 - **Helm charts**: Modular, reusable, and configurable Kubernetes package manager code for robust deployment and release management.
+- **Jenkins Shared Library Integration**: Utilizes a centralized Jenkins shared library ([jenkins-shared-library](https://github.com/BharathKumarReddy2103/jenkins-shared-library)) for standardized pipeline steps and DRY (Don't-Repeat-Yourself) automation across repositories.
 
 ---
 
@@ -56,6 +57,12 @@ This repository contains:
 2. **Configure Jenkins**
    - Import or reference the `Jenkinsfile` in your Jenkins job.
    - Set up necessary secrets/credentials for your Kubernetes cluster and Docker registry.
+   - **Jenkins Shared Library**: 
+     - Reference the shared library in your Jenkins global configuration or in the pipeline using the `@Library` annotation:
+       ```groovy
+       @Library('jenkins-shared-library') _
+       ```
+     - For more details and usage examples, see the [jenkins-shared-library repository](https://github.com/BharathKumarReddy2103/jenkins-shared-library).
 
 3. **Helm Deployment**
    - Customize values in `helm/values.yaml` as needed.
@@ -79,6 +86,7 @@ This repository contains:
 - **helm/**: Contains Helm chart code for templated deployments.
 - **k8s/**: Raw Kubernetes manifests for deployment, service, config maps, etc.
 - **Jenkinsfile**: Declarative pipeline for building, testing, and deploying the catalogue service.
+- **Jenkins Shared Library**: Externalized pipeline steps, utilities, and best practices imported from [jenkins-shared-library](https://github.com/BharathKumarReddy2103/jenkins-shared-library).
 
 ---
 
