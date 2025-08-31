@@ -1,4 +1,4 @@
-# Catalogue Microservice - Continuous Delivery & Deployment
+# Roboshop Catalogue Microservice - Continuous Delivery & Deployment
 
 Welcome to the **catalogue-cd** repository. This project focuses on the continuous delivery (CD) and deployment automation for the Catalogue microservice, providing all the configurations and scripts necessary for seamless CI/CD integration, deployment to Kubernetes, and Helm-based release management.
 
